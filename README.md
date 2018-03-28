@@ -8,8 +8,6 @@
 克隆远程库
 
 ```
-git clone https://github.com/ithack/nodeJsMongodb-demo.git
-```
 进入项目目录
 
 ```

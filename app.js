@@ -3,17 +3,17 @@
  *  fs：文件系统；
  *
  */
-const fs = require('fs');
-const path = require('path');
-const express = require('express');
-const validator = require('express-validator');
-const mongoose = require('mongoose');
-const md5 = require("md5");
-const session = require('express-session');
-const MongoStore = require('connect-mongo')(session);
-const router = express.Router();
-const bodyParser = require('body-parser');
-const app = express();
+const fs = require('fs');  //文件系统
+const path = require('path');  //路径
+const express = require('express');  //web 应用开发框架
+const validator = require('express-validator'); //中间件，它验证请求的body, params, query, headers 和 cookies ，并且如果任何配置的验证规则失败,返回一个错误的响应;
+const mongoose = require('mongoose'); //node.js异步环境下对mongodb进行便捷操作的对象模型工具
+const md5 = require("md5");  //加密工具
+const session = require('express-session'); //基于express框专门用于处理session的中间件
+const MongoStore = require('connect-mongo')(session); //session持久化保存到mongoDB的工具
+const router = express.Router(); //express路由
+const bodyParser = require('body-parser'); //express中间件，作用是对post请求的请求体进行解析
+const app = express();  //
 const User = require('./server/db').User;
 const resolve = file=>path.resolve(__dirname, file);
 const db = require('./server/db');
