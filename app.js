@@ -15,7 +15,8 @@ const router = express.Router(); //express路由
 const bodyParser = require('body-parser'); //express中间件，作用是对post请求的请求体进行解析
 const app = express();  //
 const User = require('./server/db').User;
-const resolve = file=>path.resolve(__dirname, file);
+const resolve = file=>path.resolve(__dirname, file);//path.resolve（）方法将一系列路径或路径段解析为绝对路径。
+// path.resolve([from ...], to) 说明：将参数 to 位置的字符解析到一个绝对路径里。参数说明：from 源路径、to 将被解析到绝对路径的字符串
 const db = require('./server/db');
 
 app.set('port', (process.env.port || 3300));
